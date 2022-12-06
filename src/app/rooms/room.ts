@@ -21,4 +21,5 @@ export interface RondelList{
     rondelLastName: string;
     rondelAge: number;
     rondelGoToNextLevel?: boolean;
+    rondelRating: number;
 }

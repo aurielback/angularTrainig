@@ -10,7 +10,7 @@ export class RoomsComponent {
 
   hotelName: string = 'Hilton';
 
-  numberOfRooms: number = 10;
+  numberOfRooms: number = 0;
 
   hideRooms = false;
   hideRondel = false;
@@ -23,7 +23,7 @@ export class RoomsComponent {
 
   rooms: Room = {
     totalRooms : 30,
-    availableRooms : 10,
+    availableRooms : 0,
     bookedRooms : 20
   }
 
@@ -60,37 +60,43 @@ export class RoomsComponent {
     rondelFirstName: 'Jakub1',
     rondelLastName: 'Romel',
     rondelAge: 26,
+    rondelRating: 1.6
   },
   {
     rondelNumber: 2,
     rondelFirstName: 'Jakub2',
     rondelLastName: 'Romel',
     rondelAge: 27,
-    rondelGoToNextLevel: true
+    rondelGoToNextLevel: true,
+    rondelRating: 7.6
   },
   {
     rondelNumber: 3,
     rondelFirstName: 'Jakub3',
     rondelLastName: 'Romel',
     rondelAge: 28,
+    rondelRating: 10.0
   },
   {
     rondelNumber: 3,
     rondelFirstName: 'Jakub3',
     rondelLastName: 'Romel',
     rondelAge: 28,
+    rondelRating: 3.8
   },
   {
     rondelNumber: 3,
     rondelFirstName: 'Jakub3',
     rondelLastName: 'Romel',
     rondelAge: 28,
+    rondelRating: 4.6
   },
   {
     rondelNumber: 3,
     rondelFirstName: 'Jakub3',
     rondelLastName: 'Romel',
     rondelAge: 28,
+    rondelRating: 2.6
   }]
 
 
