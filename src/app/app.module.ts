@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { RoomsComponent } from './rooms/rooms.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RoomsListComponent } from './rooms/rooms-list/rooms-list.component';
+import { RondelsListComponent } from './rooms/rondels-list/rondels-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RoomsComponent,
     RoomsListComponent,
+    RondelsListComponent,
   ],
   imports: [
     BrowserModule,

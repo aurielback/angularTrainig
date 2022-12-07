@@ -1,0 +1,32 @@
+<div>
+    Rondel list
+    <table>
+        <tr>
+            <th> Index </th>
+            <th> Even / Odd </th>
+            <th> Rondel number </th>
+            <th> Rondel first name </th>
+            <th> Rondel last name </th>
+            <th> Rondel age </th>
+            <th> Rondel go to next level </th>
+            <th> Rondel rating </th>
+            <th> Select rondel </th>
+        </tr>
+        <tr [ngClass]=" e ?  'even' : 'odd' " *ngFor="let rondel of rondels; let e = even; let o = odd; let i = index">
+            <td> {{ i + 1}} </td>
+            <td> {{e ? "Even" : "Odd"}} </td>
+            <td> {{ rondel.rondelNumber}}</td>
+            <td> {{ rondel.rondelFirstName }}</td>
+            <td> {{ rondel.rondelLastName }}</td>
+            <td> {{ rondel.rondelAge }}</td>
+            <td> {{ rondel.rondelGoToNextLevel }}</td>
+            <td> {{ rondel.rondelRating }}</td>
+            <td>
+                <button class="btn btn-primary" (click)="selectRondel(rondel)">
+                    Select rondel
+                </button>
+            </td>
+        </tr>
+    </table>
+    <!-- {{roomList | json}} -->
+</div>

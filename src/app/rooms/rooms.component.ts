@@ -1,3 +1,4 @@
+import { JsonPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { RondelList, Room, RoomList } from './room';
 
@@ -30,6 +31,9 @@ export class RoomsComponent implements OnInit{
   roomList: RoomList[] = [];
 
   rondelList: RondelList[] = [];
+
+  selectedRoom!: RoomList;
+  selectedRondel!: RondelList;
 
 
   constructor() {
@@ -121,5 +125,27 @@ export class RoomsComponent implements OnInit{
 
   onRondel(){
     this.hidenRondelList = !this.hidenRondelList;
+  }
+
+  selectRoom(room : RoomList){
+    this.selectedRoom = room;
+  }
+
+  selectRondel(rondel : RondelList){
+    this.selectedRondel = rondel;
+  }
+
+  addRoom(){
+    const room: RoomList = {
+      roomNumber: 10, 
+      roomType: 'HiperSuperDeluxe',
+      amenities: 'exampleAmeniti',
+      price: 15000,
+      photos: 'photo',
+      checkInTime: new Date('10-Nov-20'),
+      checkOutTime: new Date('11-Jan-30')
+    }
+    console.log(room);
+    this.roomList = [...this.roomList, room];
   }
 }

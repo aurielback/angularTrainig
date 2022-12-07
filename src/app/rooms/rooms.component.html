@@ -10,7 +10,19 @@
     <div [ngStyle]="{'color' : rooms.availableRooms ? 'green' : 'red'}">
         Number of rooms: {{rooms.availableRooms ?? 'no rooms'}}
     </div>
-    <rnd-rooms-list [rooms]="roomList"> </rnd-rooms-list>
 
-   
+    <div> 
+        <button (click)="addRoom()"> Add room </button>
+    </div>
+
+    <rnd-rooms-list [rooms]="roomList" (selectedRoom)="selectRoom($event)"> </rnd-rooms-list>
+    <div *ngIf="selectedRoom">
+        {{selectedRoom | json}}
+    </div>
+
+
+    <rnd-rondels-list [rondels]="rondelList" (selectedRondel)="selectRondel($event)"> </rnd-rondels-list>
+    <div *ngIf="selectedRondel">
+        {{selectedRondel | json}}
+    </div>
 </body>
